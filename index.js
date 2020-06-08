@@ -67,6 +67,9 @@ function getWinners(callback, data) {
     if (data["Home Team Goals"] > data["Away Team Goals"]) {
         return data["Home Team Name"];
     }
+    else if (data["Home Team Goals"] === data["Away Team Goals"]) {
+        return data["Win conditions"].slice(0, -24);
+    }
     else { return data["Away Team Name"];
 }
    });
